@@ -3,7 +3,30 @@
 """
 2nd term project for our Algorithms Analysis and Design course
 """
-it = iter(sys.stdin.read().splitlines())
+
+# import sys
+# it = iter(sys.stdin.read().splitlines())
+#
+#
+# lin = next(it).split(",")
+# numbers = [int(x) for x in lin]     # list with inted numbers
+# print(numbers)
 
 
-linea = next(it)  # .split(", ")
+
+def mergeSort(numbers):
+    pass
+
+# una forma
+x,y = 1,2
+print(x,y)
+x,y = y,x
+print(x,y)
+
+# la forma de luich
+x, y = 3,4
+print(x,y)
+x += y
+y = x-y
+x -= y
+print(x,y)
