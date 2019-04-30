@@ -28,28 +28,27 @@ x -= y
 print(x,y)
 """
 
-laLista = [0,1,2,3,4,5,6]
+laLista = [76,5,76,23,467,234,54,0,2,22]
 
-def mergeSort(list):
-    if len(list) == 1:
-        return list
-    elif len(list) == 2:
-        # cases for 2 elems
-        if list[0] > list[1]:
-            list[0], list[1] = list[1], list[0]
-            return list
+def mergeSort(lst):
+    if len(lst) == 1:
+        return lst
+    elif len(lst) == 2:
+        if lst[0] > lst[1]:
+            lst[0], lst[1] = lst[1], lst[0]
+            return lst
         else:
-            return list
+            return lst
     else:
-        merge( mergeSort(list[0:len(list)//2]), mergeSort(list[len(list)//2:len(list)]) )
+        return merge( mergeSort(lst[0:len(lst) // 2]), mergeSort(lst[len(lst) // 2:len(lst)]) )
 
 def merge(lst1, lst2):
-    print(lst1, "manz")
-    print(lst2, "ana")
+    print("lH",lst1)
+    print("rH",lst2)
     merged = [0]*(len(lst1) + len(lst2))
-
-    print(len(merged))
-    print((len(lst1) + len(lst2)))
+    print("merged",merged)
+    print("lenMerged",len(merged))
+    print("globalLen",(len(lst1) + len(lst2)))
 
     i = 0
     j = 0
