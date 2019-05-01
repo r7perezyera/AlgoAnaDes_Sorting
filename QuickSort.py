@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 # Authors: Irving Fuentes Aguilera, Roberto Téllez Perezyera
 
-laLista = [0,1]
+laLista = [76,5,76,23,467,234,54,0,2,22]
 # [76,5,76,23,467,234,54,0,2,22]
 
 def quickSort(lst, start, end):
