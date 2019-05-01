@@ -1,9 +1,6 @@
 # Encoding: UTF-8
 # Authors: Irving Fuentes Aguilera, Roberto Téllez Perezyera
 
-laLista = [76,5,76,23,467,234,54,0,2,22]
-# [76,5,76,23,467,234,54,0,2,22]
-
 def quickSort(lst, start, end):
     if start < end:
         pivot = quickSortPartition(lst, start, end)
@@ -25,10 +22,22 @@ def quickSortPartition(lst, start, end):
     lst[i+1], lst[end] = lst[end], lst[i+1]
     return i + 1
 
-size = len(laLista)
-quickSort(laLista, 0, size - 1)
 
-result = ""
-for i in range(0, size, 1):
-    result += str(laLista[i]) + ", "
-print(result[:-2])
+
+
+def main():
+    line = open("numbers.txt", "r").readline().split(",")
+
+    numbers = []
+    for string in line:
+        numbers.append(int(string))
+
+    size = len(numbers)
+    quickSort(numbers, 0, size - 1)
+
+    result = ""
+    for i in range(0, size, 1):
+        result += str(numbers[i]) + ", "
+    print(result[:-2])
+
+main()
