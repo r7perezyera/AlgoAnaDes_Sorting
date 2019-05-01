@@ -1,5 +1,5 @@
 # Encoding: UTF-8
-# Authors: Irving Fuentes Aguilera, Roberto Téllez Perezyera
+# Authors:
 
 def mergeSort(lst):
     if len(lst) == 1:
