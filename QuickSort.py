@@ -8,7 +8,6 @@ def quickSort(lst, start, end):
         quickSort(lst, start, pivot - 1)
         quickSort(lst, pivot + 1, end)
 
-
 def quickSortPartition(lst, start, end):
     pivot = lst[end]
     i = (start - 1)
@@ -21,8 +20,6 @@ def quickSortPartition(lst, start, end):
     # swap lst[i+1], lst[end] (or pivot)
     lst[i+1], lst[end] = lst[end], lst[i+1]
     return i + 1
-
-
 
 
 def main():

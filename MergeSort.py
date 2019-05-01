@@ -41,6 +41,7 @@ def merge(lst1, lst2):
 
     return merged
 
+
 def main():
     line = open("numbers.txt", "r").readline().split(",")
 
