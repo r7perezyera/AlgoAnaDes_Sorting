@@ -13,4 +13,22 @@ def quickSort(lst, start, end):
 
 
 def quickSortPartition(lst, start, end):
-    pass
+    pivot = lst[end]
+    i = (start - 1)
+    for j in range(start, end, 1):
+        if lst[j] <= pivot:
+            i += 1
+            # swap lst[i], lst[j]
+            lst[i], lst[j] = lst[j], lst[i]     #hopefully this swap works as i think it does
+
+    # swap lst[i+1], lst[end] (or pivot)
+    lst[i+1], lst[end] = lst[end], lst[i+1]
+    return i + 1
+
+size = len(laLista)
+quickSort(laLista, 0, size - 1)
+
+result = ""
+for i in range(0, size, 1):
+    result += str(laLista[i]) + ", "
+print(result[:-2])
