@@ -4,32 +4,6 @@
 2nd term project for our Algorithms Analysis and Design course
 """
 
-# import sys
-# it = iter(sys.stdin.read().splitlines())
-#
-#
-# lin = next(it).split(",")
-# numbers = [int(x) for x in lin]     # list with inted numbers
-# print(numbers)
-
-"""
-# una forma
-x,y = 1,2
-print(x,y)
-x,y = y,x
-print(x,y)
-
-# la forma de luich
-x, y = 3,4
-print(x,y)
-x += y
-y = x-y
-x -= y
-print(x,y)
-"""
-
-laLista = [76,5,76,23,467,234,54,0,2,22]
-
 def mergeSort(lst):
     if len(lst) == 1:
         return lst
@@ -43,12 +17,7 @@ def mergeSort(lst):
         return merge( mergeSort(lst[0:len(lst) // 2]), mergeSort(lst[len(lst) // 2:len(lst)]) )
 
 def merge(lst1, lst2):
-    print("lH",lst1)
-    print("rH",lst2)
     merged = [0]*(len(lst1) + len(lst2))
-    print("merged",merged)
-    print("lenMerged",len(merged))
-    print("globalLen",(len(lst1) + len(lst2)))
 
     i = 0
     j = 0
@@ -75,6 +44,14 @@ def merge(lst1, lst2):
 
     return merged
 
+def main():
+    line = open("numbers.txt", "r").readline().split(",")
 
-print(mergeSort(laLista))
+    numbers = []
+    for string in line:
+        numbers.append(int(string))
 
+    ans = mergeSort(numbers)
+    print(ans)
+
+main()
