@@ -15,7 +15,7 @@ def quickSortPartition(lst, start, end):
         if lst[j] <= pivot:
             i += 1
             # swap lst[i], lst[j]
-            lst[i], lst[j] = lst[j], lst[i]     #hopefully this swap works as i think it does
+            lst[i], lst[j] = lst[j], lst[i]
 
     # swap lst[i+1], lst[end] (or pivot)
     lst[i+1], lst[end] = lst[end], lst[i+1]
@@ -23,7 +23,9 @@ def quickSortPartition(lst, start, end):
 
 
 def main():
-    line = open("numbers.txt", "r").readline().split(",")
+    file = open("numbers.txt", "r")
+    line = file.readline().split(",")
+    file.close()
 
     numbers = []
     for string in line:
