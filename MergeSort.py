@@ -1,5 +1,5 @@
 # Encoding: UTF-8
-# Authors:
+# Authors: Joaquin Rios, Roberto Tellez
 
 def mergeSort(lst):
     if len(lst) == 1:
@@ -43,7 +43,9 @@ def merge(lst1, lst2):
 
 
 def main():
-    line = open("numbers.txt", "r").readline().split(",")
+    file = open("numbers.txt", "r")
+    line = file.readline().split(",")
+    file.close()
 
     numbers = []
     for string in line:

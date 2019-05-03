@@ -1,5 +1,5 @@
 # Encoding: UTF-8
-# Authors:
+# Authors: Joaquin Rios, Roberto Tellez
 
 def quickSort(lst, start, end):
     if start < end:
